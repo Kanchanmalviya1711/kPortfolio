@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   padding: 0%;
@@ -23,19 +24,23 @@ body {
   margin: 10px 10px 10px 10px;
   font-family: initial;
 }
+
 /* CSS styling for the navbar */
 nav {
   padding: 10px;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
+
 li {
   float: left;
 }
+
 li a {
   display: block;
   color: white;
@@ -43,9 +48,11 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
+
 li a:hover {
   color: rgb(69, 213, 218);
 }
+
 .section_two {
   display: flex;
   flex-direction: row;
@@ -54,16 +61,33 @@ li a:hover {
   background-color: #0f2537;
   padding: 5rem 0rem;
 }
+
 .section_two img,
 .bio {
   width: 50%;
   margin: 1rem;
+}
+.section_two img {
+  animation: floatImage 4s ease-in-out infinite;
+}
+/* typed animation */
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .bio h1,
 h3 {
   color: white;
 }
+
 .bio h4 {
   color: #f1f1f1;
 }
@@ -77,11 +101,13 @@ h3 {
     width: 100%;
   }
 }
+
 .typed-text {
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s steps(40) infinite alternate;
 }
+
 .bioPara {
   font-size: 17px;
   font-family: monospace;
@@ -97,13 +123,21 @@ h3 {
   width: 3rem;
   height: 3rem;
   background: transparent;
-  border: 0.2em solid rgb(69, 213, 218);
+  border: 0.2em solid cadetblue;
   border-radius: 50%;
   font-size: 1.7rem;
   color: #fff;
 }
+.social-media a:hover {
+  color: #fff;
+  background: cadetblue;
+}
 
-.resume-section p {
+.downloadCV {
+  margin-top: 2rem;
+}
+
+.resume-section p a {
   margin-top: 3rem;
   background-color: rgb(69, 213, 218);
   box-shadow: 2px 0px 14px rgb(69, 213, 218);
@@ -111,12 +145,15 @@ h3 {
   display: inline-block;
   color: #fff;
   letter-spacing: 0.1rem;
-  padding: 10px;
+  padding: 10px 20px;
   transition: 0.5s ease;
 }
-.resume-section p:hover {
+
+.resume-section p a:hover {
   color: rgb(69, 213, 218);
   background-color: #fff;
+  text-decoration: none;
+  box-shadow: 2px 0px 14px #fff;
 }
 
 /* about */
@@ -130,11 +167,13 @@ h3 {
   gap: 2rem;
   padding-top: 4rem;
 }
+
 .about-container h2 {
   color: #fff;
   font-size: 2.5rem;
   padding: 1rem 0rem 0rem;
 }
+
 .about-container span {
   color: rgb(69, 213, 218);
 }
@@ -150,26 +189,32 @@ h3 {
   background-color: #0f2537;
   padding-top: 5rem;
 }
+
 .about-project h1 {
   text-align: center;
   color: #fff;
 }
+
 .about-project span {
   color: rgb(69, 213, 218);
 }
+
 .project_container {
   padding: 1rem;
   display: flex;
   justify-content: space-evenly;
 }
+
 .card-b {
   background-color: rgb(0, 0, 0, 0.1);
   border: 1px solid white;
   border-radius: 4px;
 }
+
 .card-para {
   color: #fff;
 }
+
 .title-color {
   color: rgb(69, 213, 218);
 }
@@ -184,11 +229,13 @@ h3 {
   padding: 10px;
   transition: 0.5s ease;
 }
+
 .view-button:hover {
   background-color: #fff;
   color: rgb(69, 213, 218);
   box-shadow: 2px 0px 14px #fff;
 }
+
 .align-center {
   text-align: center;
 }
@@ -203,26 +250,32 @@ h3 {
   padding: 5rem 0rem;
   gap: 2rem;
 }
+
 .contact-section {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .section_contact {
   background-color: #0f2537;
   padding-top: 5rem;
 }
+
 .about-contact h1 {
   color: #fff;
   padding: 10px;
 }
+
 .about-contact span {
   color: rgb(69, 213, 218);
 }
+
 .social-media-contact img {
   width: 10%;
   margin: 10px 5px 10px 0px;
 }
+
 .social-media-contact img:hover {
   transform: scale(1.1);
   transition: 0.5s ease;

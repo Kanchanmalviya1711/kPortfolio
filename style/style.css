@@ -424,6 +424,14 @@ h3 {
   }
 
   /* main content responsive */
+  .header {
+    padding: 2rem;
+    border-bottom: 2px solid white;
+  }
+  .fa-bars,
+  .fa-xmark {
+    font-size: 3rem;
+  }
   .section_two {
     flex-direction: column;
     padding: 8rem 0rem;

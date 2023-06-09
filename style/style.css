@@ -1,57 +1,81 @@
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+* {
+  padding: 0;
   margin: 0;
-  padding: 0%;
-  background-color: #0f2537;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: clip;
 }
 
-.section {
+/* header section css */
+.header {
+  padding: 1rem;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: #0f2537;
   position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
 }
 
-.section h1 {
-  color: white;
-  margin: 10px 10px 10px 10px;
+.header h1 {
+  color: #fff;
   font-family: initial;
-}
-
-/* CSS styling for the navbar */
-nav {
-  padding: 10px;
-}
-
-ul {
-  list-style-type: none;
   margin: 0;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0px;
   padding: 0;
-  overflow: hidden;
 }
 
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s;
+  font-family: emoji;
 }
 
-li a:hover {
-  color: rgb(69, 213, 218);
+.navbar-link:hover,
+.navbar-link:active {
+  color: cadetblue;
 }
+
+.mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.fa-bars,
+.fa-xmark {
+  font-size: 2rem;
+  color: white;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
+}
+/* bio css */
 
 .section_two {
   display: flex;
@@ -61,7 +85,6 @@ li a:hover {
   background-color: #0f2537;
   padding: 5rem 0rem;
 }
-
 .section_two img,
 .bio {
   width: 50%;
@@ -82,7 +105,6 @@ li a:hover {
     transform: translateY(0);
   }
 }
-
 .bio h1,
 h3 {
   color: white;
@@ -91,7 +113,6 @@ h3 {
 .bio h4 {
   color: #f1f1f1;
 }
-
 /* typed animation */
 @keyframes typing {
   from {
@@ -101,13 +122,11 @@ h3 {
     width: 100%;
   }
 }
-
 .typed-text {
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s steps(40) infinite alternate;
 }
-
 .bioPara {
   font-size: 17px;
   font-family: monospace;
@@ -125,7 +144,7 @@ h3 {
   background: transparent;
   border: 0.2em solid cadetblue;
   border-radius: 50%;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #fff;
 }
 .social-media a:hover {
@@ -144,6 +163,7 @@ h3 {
   border-radius: 4rem;
   display: inline-block;
   color: #fff;
+  text-decoration: none;
   letter-spacing: 0.1rem;
   padding: 10px 20px;
   transition: 0.5s ease;
@@ -156,7 +176,7 @@ h3 {
   box-shadow: 2px 0px 14px #fff;
 }
 
-/* about */
+/* about css */
 .section_about {
   display: flex;
   flex-direction: row-reverse;
@@ -205,18 +225,19 @@ h3 {
   }
 }
 
-/* project */
+/* project css */
+
 .section_project {
   background-color: #0f2537;
   padding-top: 5rem;
 }
 
-.about-project h1 {
+.section_project h1 {
   text-align: center;
   color: #fff;
 }
 
-.about-project span {
+.section_project span {
   color: rgb(69, 213, 218);
 }
 
@@ -243,12 +264,14 @@ h3 {
 .view-button {
   background-color: rgb(69, 213, 218);
   box-shadow: 2px 0px 14px rgb(69, 213, 218);
-  border-radius: 4rem;
+  border-radius: 5px;
   display: inline-block;
   color: #fff;
   letter-spacing: 0.1rem;
   padding: 10px;
   transition: 0.5s ease;
+  text-decoration: none;
+  font-family: initial;
 }
 
 .view-button:hover {
@@ -261,7 +284,7 @@ h3 {
   text-align: center;
 }
 
-/* contact */
+/* contact css */
 .contact_container {
   display: flex;
   flex-direction: row;
@@ -320,13 +343,6 @@ h3 {
   cursor: pointer;
 }
 
-/* toggle menu */
-
-.menu-toggle {
-  color: #fff;
-  display: flex;
-}
-
 /* footer section */
 .footer {
   background-color: #0f2537;
@@ -357,7 +373,7 @@ h3 {
   box-shadow: 2px 0px 14px #fff;
 }
 
-/* Media Query Responsive Design */
+/* Breakpoints Adding Media Query for respnsive design */
 
 @media (max-width: 1200px) {
   html {
@@ -365,14 +381,56 @@ h3 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 999;
+  }
+  .nav-display {
+    width: 100%;
+    height: 100vh;
+    background: #0f2537;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .active .nav-display {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+
+  /* main content responsive */
   .section_two {
     flex-direction: column;
+    padding: 8rem 0rem;
   }
   .section_two .bio,
   .about-container {
     width: 100%;
-    padding: 2rem;
   }
   .social-media a {
     width: 4rem;
@@ -380,6 +438,10 @@ h3 {
   }
   .section_about {
     flex-direction: column;
+    padding-top: 10rem;
+  }
+  .section_project {
+    padding-top: 10rem;
   }
   .project_container {
     display: flex;
@@ -395,10 +457,18 @@ h3 {
   }
   .hero-container {
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
   }
   .footer-icontop a {
     padding: 5px 10px;
     border-radius: 5px;
+  }
+  .footer-icontop a:hover {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .section_two img {
+    width: 100%;
+    padding: 1rem;
   }
 }

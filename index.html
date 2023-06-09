@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- link Css -->
+    <!-- link css -->
     <link rel="stylesheet" href="./style/style.css" />
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
@@ -17,153 +19,170 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <!-- link Js -->
+    <!-- link js -->
     <script src="./script/script.js"></script>
-    <title>Kanchan Portfolio</title>
+    <title>kanchan</title>
   </head>
-
   <body>
-    <!-- Header Section-->
-    <header>
-      <div class="section">
-        <h1>React Native Developer</h1>
-        <nav>
-          <ul>
-            <li><a href="#section1">Home</a></li>
-            <li><a href="#section2">About</a></li>
-            <li><a href="#section3">Projects</a></li>
-            <li><a href="#section4">Contact</a></li>
-          </ul>
-        </nav>
+    <!--Header Section -->
+    <header class="header">
+      <h1>React Native Developer</h1>
+      <nav class="nav-display">
+        <ul class="navbar-list">
+          <li>
+            <a class="navbar-link" href="#section1" onclick="hideHeader()"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="navbar-link" href="#section2" onclick="hideHeader()"
+              >About</a
+            >
+          </li>
+          <li>
+            <a class="navbar-link" href="#section3" onclick="hideHeader()"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a class="navbar-link" href="#section4" onclick="hideHeader()"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-navbar-btn">
+        <i class="fa-solid fa-bars mobile-nav-icon" name="menu-outline"></i>
+        <i class="fa-solid fa-xmark mobile-nav-icon" name="close-outline"></i>
       </div>
     </header>
-    <!-- Bio Section -->
-    <section id="section1">
-      <div class="section_two img">
-        <img src="./assets/img/mdev.png" alt="Kanchan Malviya" />
 
-        <div class="hero-container bio" data-aos="fade-in">
-          <h1>Kanchan Malviya</h1>
-          <h4 class="typed-text">
-            I'm Frontent Developer
-            <span
-              class="typed"
-              data-typed-items="Designer, Developer, Freelancer, Photographer"
-            ></span>
-          </h4>
-          <article class="bioPara">
-            I am a Mobile App Developer with 2 years of experience in Front-End
-            Development And Design. I have worked on various projects in the
-            field of Web Development, Mobile Development, E-Commerce, UX/UI
-            Design, And Web Design.
-          </article>
-          <div class="icons downloadCV">
-            <div class="social-media">
-              <a href="https://github.com/kanchanmalvi" class="href"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a
-                href="https://instagram.com/malvi_ji17?igshid=NGExMmI2YTkyZg=="
-                class="href"
-              >
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/kanchan-malviya-2095031b4"
-                class="href"
-              >
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-            </div>
-            <div class="resume-section">
-              <p>
+    <!-- Main Section -->
+
+    <main>
+      <!-- bio -->
+      <section class="section1" id="section1">
+        <div class="section_two img">
+          <img src="./assets/img/mdev.png" alt="Kanchan Malviya" />
+
+          <div class="hero-container bio" data-aos="fade-in">
+            <h1>Kanchan Malviya</h1>
+            <h4 class="typed-text">
+              I'm Frontent Developer
+              <span
+                class="typed"
+                data-typed-items="Designer, Developer, Freelancer, Photographer"
+              ></span>
+            </h4>
+            <article class="bioPara">
+              I am a Mobile App Developer with 2 years of experience in
+              Front-End Development And Design. I have worked on various
+              projects in the field of Web Development, Mobile Development,
+              E-Commerce, UX/UI Design, And Web Design.
+            </article>
+            <div class="icons downloadCV">
+              <div class="social-media">
+                <a href="https://github.com/kanchanmalvi" class="href"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
                 <a
-                  href="./assets/resume/Kresume.pdf"
-                  download
-                  class="resume-section"
-                  >Download CV</a
+                  href="https://instagram.com/malvi_ji17?igshid=NGExMmI2YTkyZg=="
+                  class="href"
                 >
-              </p>
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/kanchan-malviya-2095031b4"
+                  class="href"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+              <div class="resume-section">
+                <p>
+                  <a
+                    href="./assets/resume/Kresume.pdf"
+                    download
+                    class="resume-section"
+                    >Download CV</a
+                  >
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="section2">
-      <div class="section_about">
-        <div class="about-img">
-          <img src="./assets/img/aboutme.png" alt="about-img" />
-        </div>
-        <div class="about-container">
-          <h2>About<span> Me</span></h2>
+      <!-- about section -->
+      <section class="section2" id="section2">
+        <div class="section_about">
+          <div class="about-img">
+            <img src="./assets/img/aboutme.png" alt="about-img" />
+          </div>
+          <div class="about-container">
+            <h2>About<span> Me</span></h2>
 
-          <div class="about-para">
-            <article class="aboutPara">
-              Hey, My name is Kanchan Malviya, and I am a React Native Developer
-              with two years of experience in development and design.
-            </article>
-            <article class="aboutPara">
-              I am passionate about mobile app development and have dedicated my
-              career to building robust and user-friendly applications using
-              React Native.
-            </article>
+            <div class="about-para">
+              <article class="aboutPara">
+                Hey, My name is Kanchan Malviya, and I am a React Native
+                Developer with two years of experience in development and
+                design.
+              </article>
+              <article class="aboutPara">
+                I am passionate about mobile app development and have dedicated
+                my career to building robust and user-friendly applications
+                using React Native.
+              </article>
 
-            <article class="aboutPara">
-              Throughout my journey, I have gained extensive knowledge and
-              hands-on experience in developing cross-platform mobile
-              applications for both iOS and Android platforms.
-            </article>
-            <article class="aboutPara">
-              I have worked on various projects, collaborating with diverse
-              teams and clients, to deliver high-quality solutions that meet
-              their specific requirements. My expertise lies in leveraging the
-              power of React Native to create efficient and performant apps with
-              a native-like experience.
-            </article>
+              <article class="aboutPara">
+                Throughout my journey, I have gained extensive knowledge and
+                hands-on experience in developing cross-platform mobile
+                applications for both iOS and Android platforms.
+              </article>
+              <article class="aboutPara">
+                I have worked on various projects, collaborating with diverse
+                teams and clients, to deliver high-quality solutions that meet
+                their specific requirements. My expertise lies in leveraging the
+                power of React Native to create efficient and performant apps
+                with a native-like experience.
+              </article>
 
-            <article class="aboutPara">
-              I am well-versed in React Native components, libraries, and APIs,
-              and proficient in implementing state management solutions such as
-              Redux or MobX. I have a understanding of JavaScript and its modern
-              frameworks, including React.js, which allows me to build reusable
-              and scalable components.
-            </article>
-            <article class="aboutPara">
-              I am familiar with integrating third-party APIs, implementing push
-              notifications, handling asynchronous operations, and optimizing
-              app performance for different devices and screen sizes. In
-              addition to my technical skills, I am a strong communicator and a
-              collaborative team player.
-            </article>
+              <article class="aboutPara">
+                I am well-versed in React Native components, libraries, and
+                APIs, and proficient in implementing state management solutions
+                such as Redux or MobX. I have a understanding of JavaScript and
+                its modern frameworks, including React.js, which allows me to
+                build reusable and scalable components.
+              </article>
+              <article class="aboutPara">
+                I am familiar with integrating third-party APIs, implementing
+                push notifications, handling asynchronous operations, and
+                optimizing app performance for different devices and screen
+                sizes. In addition to my technical skills, I am a strong
+                communicator and a collaborative team player.
+              </article>
 
-            <article class="aboutPara">
-              I thrive in agile environments, where I can contribute my ideas,
-              provide valuable insights, and work closely with designers, QA
-              engineers, and product managers to deliver exceptional mobile
-              experiences.
-            </article>
+              <article class="aboutPara">
+                I thrive in agile environments, where I can contribute my ideas,
+                provide valuable insights, and work closely with designers, QA
+                engineers, and product managers to deliver exceptional mobile
+                experiences.
+              </article>
 
-            <article class="aboutPara">
-              I am continuously learning and staying up-to-date with the latest
-              trends and advancements in the React Native ecosystem. I am
-              excited about the opportunity to work on new projects, tackle
-              challenging problems, and contribute to the success of the team.
-            </article>
+              <article class="aboutPara">
+                I am continuously learning and staying up-to-date with the
+                latest trends and advancements in the React Native ecosystem. I
+                am excited about the opportunity to work on new projects, tackle
+                challenging problems, and contribute to the success of the team.
+              </article>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Project Section -->
-    <section id="section3">
-      <div class="section_project">
-        <div class="about-project">
+      <!-- project section -->
+      <section class="section2" id="section3">
+        <div class="section_project">
           <h1><span>My</span>Projects</h1>
           <div class="project_container">
             <div class="card-b" style="width: 18rem">
@@ -180,7 +199,7 @@
                   efficient.
                 </p>
 
-                <a href="#" class="btn view-button"
+                <a href="#" class="view-button"
                   >View <i class="fa-brands fa-github"></i
                 ></a>
               </div>
@@ -199,7 +218,7 @@
                 </p>
                 <a
                   href="https://github.com/Kanchanmalviya1711/InstagramCloneApp"
-                  class="btn view-button"
+                  class="view-button"
                   >View <i class="fa-brands fa-github"></i
                 ></a>
               </div>
@@ -214,12 +233,12 @@
                 <h5 class="card-title title-color">Notes Taking App</h5>
                 <p class="card-text card-para">
                   React Native app for note-taking with CRUD functionality.
-                  Backend by Node Express and MongoDB for storing and managing
-                  notes.
+                  Backend used by Node Express and MongoDB for storing and
+                  managing notes.
                 </p>
                 <a
                   href="https://github.com/Kanchanmalviya1711/NotesTakingApp"
-                  class="btn view-button"
+                  class="view-button"
                   >View <i class="fa-brands fa-github"></i
                 ></a>
               </div>
@@ -241,7 +260,7 @@
                 </p>
                 <a
                   href="https://github.com/Kanchanmalviya1711/IPortfolioApp"
-                  class="btn view-button"
+                  class="view-button"
                   >View <i class="fa-brands fa-github"></i
                 ></a>
               </div>
@@ -261,7 +280,7 @@
                 </p>
                 <a
                   href="https://github.com/Kanchanmalviya1711/ChatApp"
-                  class="btn view-button"
+                  class="view-button"
                   >View <i class="fa-brands fa-github"></i
                 ></a>
               </div>
@@ -282,58 +301,63 @@
 
                 <a
                   href="https://github.com/Kanchanmalviya1711/kPortfolio"
-                  class="btn view-button"
+                  class="view-button"
                   >View <i class="fa-brands fa-github"></i
                 ></a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="section4">
-      <div class="contact_container">
-        <div class="contact-section">
-          <img
-            src="./assets/img/contactme.png"
-            alt="Kanchan Malviya"
-            width="80%"
-          />
-        </div>
-        <div class="hero-container bio" data-aos="fade-in">
-          <h1>Contact <span> Me</span></h1>
-          <article class="bioPara">Email: kanchanmalviya017@gmail.com</article>
-          <article class="bioPara">contact No. : +91 881-999-3978</article>
-          <article class="bioPara">Alt Contact No. : +91 7999-611-523</article>
+      <!-- contact section -->
+      <section class="section2" id="section4">
+        <div class="contact_container">
+          <div class="contact-section">
+            <img
+              src="./assets/img/contactme.png"
+              alt="Kanchan Malviya"
+              width="80%"
+            />
+          </div>
+          <div class="hero-container bio" data-aos="fade-in">
+            <h1>Contact <span> Me</span></h1>
+            <article class="bioPara">
+              Email: kanchanmalviya017@gmail.com
+            </article>
+            <article class="bioPara">contact No. : +91 881-999-3978</article>
+            <article class="bioPara">
+              Alt Contact No. : +91 7999-611-523
+            </article>
 
-          <h3>Or</h3>
-          <h4>Connect<span> Me</span> With</h4>
-          <div class="icons social-icon">
-            <div class="social-media-contact">
-              <a
-                href="https://www.linkedin.com/in/kanchan-malviya-2095031b4"
-                class="href"
-              >
-                <img src="./assets/img/linkedin.png" />
-              </a>
+            <h3>Or</h3>
+            <h4>Connect<span> Me</span> With</h4>
+            <div class="icons social-icon">
+              <div class="social-media-contact">
+                <a
+                  href="https://www.linkedin.com/in/kanchan-malviya-2095031b4"
+                  class="href"
+                >
+                  <img src="./assets/img/linkedin.png" />
+                </a>
 
-              <a href="https://github.com/kanchanmalvi" class="href">
-                <img src="./assets/img/github.png" />
-              </a>
-              <a
-                href="https://instagram.com/malvi_ji17?igshid=NGExMmI2YTkyZg=="
-                class="href"
-              >
-                <img src="./assets/img/instagram.png" />
-              </a>
+                <a href="https://github.com/kanchanmalvi" class="href">
+                  <img src="./assets/img/github.png" />
+                </a>
+                <a
+                  href="https://instagram.com/malvi_ji17?igshid=NGExMmI2YTkyZg=="
+                  class="href"
+                >
+                  <img src="./assets/img/instagram.png" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
+    <!-- footer section -->
     <footer class="footer">
       <div class="footer-text">
         <p>Code By Kanchan Malviya &copy; In 2023 || All Rights Reserved.</p>
@@ -343,6 +367,7 @@
       </div>
     </footer>
 
+    <!-- Js files -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -353,5 +378,19 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const mobile_nav = document.querySelector(".mobile-navbar-btn");
+      const nav_header = document.querySelector(".header");
+
+      const toggleNavbar = () => {
+        nav_header.classList.toggle("active");
+      };
+      mobile_nav.addEventListener("click", toggleNavbar);
+
+      function hideHeader() {
+        const nav_header = document.querySelector(".header");
+        nav_header.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>

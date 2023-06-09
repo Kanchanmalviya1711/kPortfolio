@@ -1,3 +1,4 @@
+console.log("port folio");
 document.addEventListener("DOMContentLoaded", function () {
   var links = document.querySelectorAll("nav a");
 

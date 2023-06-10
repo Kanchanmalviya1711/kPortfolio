@@ -318,12 +318,23 @@
           </div>
           <div class="hero-container bio" data-aos="fade-in">
             <h1>Contact <span> Me</span></h1>
+
             <article class="bioPara">
               Email: kanchanmalviya017@gmail.com
             </article>
-            <article class="bioPara">contact No. : +91 881-999-3978</article>
             <article class="bioPara">
-              Alt Contact No. : +91 7999-611-523
+              <li>
+                <a href="#" class="portfolio-link" data-phone="8819993978"
+                  >Contact No. : +91 881-999-3978</a
+                >
+              </li>
+            </article>
+            <article class="bioPara">
+              <li>
+                <a href="#" class="portfolio-link" data-phone="7999611523"
+                  >Alt Contact No. : +91 7999-611-523</a
+                >
+              </li>
             </article>
 
             <h3>Or</h3>
@@ -377,7 +388,6 @@
     <script>
       const mobile_nav = document.querySelector(".mobile-navbar-btn");
       const nav_header = document.querySelector(".header");
-
       const toggleNavbar = () => {
         nav_header.classList.toggle("active");
       };
@@ -387,6 +397,29 @@
         const nav_header = document.querySelector(".header");
         nav_header.classList.toggle("active");
       }
+
+      // call on numbers
+      // Get all portfolio links
+      const portfolioLinks = document.querySelectorAll(".portfolio-link");
+
+      // Attach click event listener to each link
+      portfolioLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Get the phone number from the data attribute
+          const phoneNumber = this.getAttribute("data-phone");
+
+          // Check if the browser supports initiating phone calls
+          if (window.open && phoneNumber) {
+            // Create the tel: URL to initiate the phone call
+            const telUrl = `tel:${phoneNumber}`;
+
+            // Open the tel: URL to initiate the phone call
+            window.open(telUrl);
+          }
+        });
+      });
     </script>
   </body>
 </html>

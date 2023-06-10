@@ -319,17 +319,21 @@
           <div class="hero-container bio" data-aos="fade-in">
             <h1>Contact <span> Me</span></h1>
 
-            <article class="bioPara">
-              Email: kanchanmalviya017@gmail.com
+            <article class="contact-link">
+              <li>
+                <a class="email-link" href="kanchanmalviya017@gmail.com"
+                  >Email: kanchanmalviya017@gmail.com</a
+                >
+              </li>
             </article>
-            <article class="bioPara">
+            <article class="contact-link">
               <li>
                 <a href="#" class="portfolio-link" data-phone="8819993978"
                   >Contact No. : +91 881-999-3978</a
                 >
               </li>
             </article>
-            <article class="bioPara">
+            <article class="contact-link">
               <li>
                 <a href="#" class="portfolio-link" data-phone="7999611523"
                   >Alt Contact No. : +91 7999-611-523</a
@@ -419,6 +423,22 @@
             window.open(telUrl);
           }
         });
+      });
+
+      // email functionality
+      // Get the email link element
+      var emailLink = document.querySelector(".email-link");
+
+      // Add a click event listener to the email link
+      emailLink.addEventListener("click", function (event) {
+        // Prevent the default action of opening the link
+        event.preventDefault();
+
+        // Get the email address from the link's href attribute
+        var emailAddress = this.getAttribute("href").replace("mailto:", "");
+
+        // Open the default email client with a new email
+        window.location.href = "mailto:" + emailAddress;
       });
     </script>
   </body>

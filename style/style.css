@@ -127,11 +127,20 @@ h3 {
   white-space: nowrap;
   animation: typing 3s steps(40) infinite alternate;
 }
-.bioPara li {
-  list-style: none;
-  margin-top: 10px;
+.bioPara {
+  font-size: 17px;
+  font-family: monospace;
+  padding: 1rem 0rem;
+  line-height: 35px;
+  color: rgb(69, 213, 218);
+  font-weight: 600;
 }
-.bioPara li a {
+
+.contact-link li {
+  list-style: none;
+  margin: 2rem 0rem;
+}
+.contact-link li a {
   font-size: 17px;
   font-family: monospace;
   padding: 1rem 0rem;
@@ -139,14 +148,9 @@ h3 {
   font-weight: 600;
   text-decoration: none;
 }
-.bioPara {
-  font-size: 17px;
-  font-family: monospace;
-  padding: 1rem 0rem;
-  color: rgb(69, 213, 218);
-  font-weight: 600;
+.contact-link li a:hover {
+  text-decoration: underline;
 }
-
 .social-media a {
   display: inline-flex;
   align-items: center;

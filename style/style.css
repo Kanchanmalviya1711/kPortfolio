@@ -184,12 +184,12 @@ h3 {
   background: cadetblue;
 }
 
-.downloadCV {
-  margin-top: 2rem;
+.socialMedia-icon {
+  width: 50%;
 }
 
 .resume-section p a {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   background-color: rgb(69, 213, 218);
   box-shadow: 2px 0px 14px rgb(69, 213, 218);
   border-radius: 4rem;
@@ -331,6 +331,12 @@ h3 {
   border-left: 1px solid rgb(69, 213, 218);
   padding-left: 1rem;
 }
+
+.education_section {
+  border-left: 1px solid rgb(69, 213, 218);
+  padding-left: 1rem;
+}
+
 .company {
   display: flex;
   align-items: center;
@@ -357,6 +363,7 @@ h3 {
   justify-content: center;
   border-left: 1px solid rgb(69, 213, 218);
 }
+
 .contact-info h2 {
   color: white;
 }
@@ -595,8 +602,8 @@ h3 {
     width: 100%;
   }
   .social-media a {
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
   }
   .section_about {
     flex-direction: column;
@@ -649,5 +656,22 @@ h3 {
   }
   .contact-link {
     width: 100%;
+  }
+  .social-media {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .socialMedia-icon {
+    width: 100%;
+  }
+  .resume-section p a {
+    margin-top: 3rem;
+    padding: 10px 10px;
+    width: 250px;
+    text-align: center;
+  }
+  .resume-section {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -71,12 +71,21 @@ body {
   font-size: 2rem;
   color: white;
 }
-
 .mobile-nav-icon[name="close-outline"] {
   display: none;
 }
+.resume-link {
+  color: rgb(69, 213, 218);
+  font-weight: 600;
+  text-decoration: none;
+  font-family: emoji;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+.resume-link:hover {
+  color: #fff;
+}
 /* bio css */
-
 .section_two {
   display: flex;
   flex-direction: row;
@@ -136,20 +145,27 @@ h3 {
   font-weight: 600;
 }
 
-.contact-link li {
-  list-style: none;
+.contact-link {
   margin: 2rem 0rem;
+  background: rgba(255, 255, 255, 0.08);
+  width: 340px;
+  padding: 15px;
 }
-.contact-link li a {
+.contact-link p {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-link a {
   font-size: 17px;
   font-family: monospace;
-  padding: 1rem 0rem;
   color: rgb(69, 213, 218);
   font-weight: 600;
   text-decoration: none;
 }
-.contact-link li a:hover {
+.contact-link a:hover {
   text-decoration: underline;
+  color: rgb(69, 213, 218);
 }
 .social-media a {
   display: inline-flex;
@@ -260,8 +276,95 @@ h3 {
   background: transparent;
 }
 
-/* project css */
+/* Experience and education */
 
+.section_exp_edu {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f2537;
+  padding: 1rem;
+  gap: 2rem;
+  padding-top: 4rem;
+}
+.expCard {
+  background-color: transparent;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px rgb(69, 213, 218);
+}
+.exp-container h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 1rem 0rem 0rem;
+}
+.exp-container span {
+  color: rgb(69, 213, 218);
+}
+
+.exp_and_edu {
+  display: flex;
+  margin: 1rem;
+}
+.aboutexp,
+.aboutedu {
+  color: white;
+  margin-top: 1rem;
+}
+
+.professional_exp,
+.professional_edu {
+  padding: 1rem;
+  width: 50%;
+}
+.exp_heading {
+  display: flex;
+  align-items: center;
+}
+.exp_heading h3 {
+  font-family: cursive;
+  margin: 0rem 0.4rem;
+  color: moccasin;
+}
+
+.work_company_section {
+  border-left: 1px solid rgb(69, 213, 218);
+  padding-left: 1rem;
+}
+.company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+.company h5 {
+  color: antiquewhite;
+  border-bottom: 1px solid antiquewhite;
+}
+.work_date p {
+  font-size: 16px;
+  background: #effbf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #34b7a7;
+}
+
+.edu_img {
+  margin: 1.5rem 0rem;
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid rgb(69, 213, 218);
+}
+.contact-info h2 {
+  color: white;
+}
+.contact-info span {
+  color: rgb(69, 213, 218);
+}
+
+/* project css */
 .section_project {
   background-color: #0f2537;
   padding-top: 5rem;
@@ -286,10 +389,16 @@ h3 {
   background-color: rgb(0, 0, 0, 0.1);
   border: 1px solid white;
   border-radius: 4px;
+  box-shadow: 2px 0px 14px rgb(69, 213, 218);
+}
+
+.card-b:hover {
+  box-shadow: 2px 0px 14px #fff;
 }
 
 .card-para {
   color: #fff;
+  width: 265px;
 }
 
 .title-color {
@@ -329,11 +438,18 @@ h3 {
   padding: 5rem 0rem;
   gap: 2rem;
 }
+.contact_sec {
+  width: 50%;
+}
+.contact_sec h1 {
+  color: #fff;
+}
 
 .contact-section {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50%;
 }
 
 .contact-section img {
@@ -412,7 +528,10 @@ h3 {
 
 @media (max-width: 1200px) {
   html {
-    font-size: 55%;
+    font-size: 70%;
+  }
+  .card-para {
+    width: 100%;
   }
 }
 
@@ -481,7 +600,7 @@ h3 {
   }
   .section_about {
     flex-direction: column;
-    padding-top: 10rem;
+    padding-top: 0rem;
   }
   .section_project {
     padding-top: 10rem;
@@ -513,5 +632,22 @@ h3 {
   .section_two img {
     width: 100%;
     padding: 1rem;
+  }
+  .exp_and_edu {
+    display: block;
+  }
+  .professional_exp,
+  .professional_edu {
+    width: 100%;
+  }
+  .contact-section {
+    width: 100%;
+  }
+  .contact_sec {
+    width: 100%;
+    padding: 1rem;
+  }
+  .contact-link {
+    width: 100%;
   }
 }

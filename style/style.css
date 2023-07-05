@@ -86,7 +86,7 @@ body {
   color: #fff;
 }
 /* bio css */
-.section_two {
+.my_intro {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -94,12 +94,14 @@ body {
   background-color: #0f2537;
   padding: 5rem 0rem;
 }
-.section_two img,
-.bio {
+.img_pic,
+.bio_section {
   width: 50%;
   margin: 1rem;
 }
-.section_two img {
+
+.img_pic img {
+  width: 650px;
   animation: floatImage 4s ease-in-out infinite;
 }
 /* typed animation */
@@ -114,12 +116,12 @@ body {
     transform: translateY(0);
   }
 }
-.bio h1,
+.bio_section h1,
 h3 {
   color: white;
 }
 
-.bio h4 {
+.bio_section h4 {
   color: #f1f1f1;
 }
 /* typed animation */
@@ -581,31 +583,43 @@ h3 {
 
   /* main content responsive */
   .header {
-    padding: 2rem;
     border-bottom: 2px solid white;
   }
   .fa-bars,
   .fa-xmark {
     font-size: 3rem;
   }
-  .section_two {
+  .my_intro {
     flex-direction: column;
     padding: 8rem 0rem;
   }
-  .section_two .bio,
+  .img_pic,
+  .bio_section {
+    width: 100%;
+    padding: 1rem;
+  }
+  .about-img,
   .about-container {
     width: 100%;
   }
+  .img_pic img {
+    width: 100%;
+  }
+
   .social-media a {
     width: 6rem;
     height: 6rem;
   }
   .section_about {
     flex-direction: column;
-    padding-top: 0rem;
+    padding-top: 6rem;
   }
   .section_project {
     padding-top: 10rem;
+  }
+  .section_project h1,
+  .contact_sec h1 {
+    font-size: 4rem;
   }
   .card-b {
     width: 100% !important;
@@ -617,14 +631,13 @@ h3 {
     width: 100%;
     padding: 1rem;
   }
-  .footer-icontop a {
-    padding: 5px 10px;
-    border-radius: 5px;
+  .footer {
+    padding: 2rem 1rem;
   }
-  .footer-icontop a:hover {
-    padding: 5px 10px;
-    border-radius: 5px;
+  .footer p {
+    font-size: 16px;
   }
+
   .section_two img {
     width: 100%;
     padding: 1rem;
@@ -662,6 +675,15 @@ h3 {
   .resume-section {
     display: flex;
     justify-content: center;
+  }
+  .bio_section h1 {
+    font-size: 3rem;
+  }
+  .bio_section h4 {
+    font-size: 2rem;
+  }
+  .exp-container {
+    padding-top: 2rem;
   }
 }
 
